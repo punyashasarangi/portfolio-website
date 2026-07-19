@@ -1,0 +1,398 @@
+/* ================= GLOBAL STYLES ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(
+        135deg,
+        #0B0B0B,
+        #1A0B2E,
+        #2D1B69
+    );
+    color:#FFFFFF;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:all 0.3s ease;
+    position:relative;
+    padding-bottom:5px;
+} 
+
+nav a:hover{
+    color:#BB86FC;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background:#BB86FC;
+    transition:0.3s ease;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+
+    background: linear-gradient(
+        90deg,
+        #FFFFFF,
+        #D6BCFA,
+        #BB86FC
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    color:#BB86FC;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+
+    border:4px solid #BB86FC;
+
+    box-shadow:
+    0 0 25px rgba(187,134,252,0.5);
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#BB86FC;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+
+    transition:0.3s ease;
+
+    box-shadow:
+    0 0 15px rgba(187,134,252,0.5);
+}
+
+.btn:hover{
+    background:#9F67F5;
+    transform:translateY(-3px);
+}
+
+
+/* Resume Buttons */
+
+.resume-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+
+/* ================= GENERAL SECTION STYLING ================= */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#BB86FC;
+}
+
+
+/* ================= SKILLS SECTION ================= */
+
+.skill-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:150px;
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(187,134,252,0.25);
+}
+
+.card h3{
+    color:#BB86FC;
+}
+
+
+/* ================= EDUCATION SECTION ================= */
+
+.education-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.education-card{
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+
+    padding:25px;
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+    transition:0.3s ease;
+}
+
+.education-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(187,134,252,0.25);
+}
+
+
+.education-card h3{
+    color:#BB86FC;
+    margin-bottom:10px;
+}
+
+.education-card p{
+    line-height:1.8;
+}
+
+
+/* ================= PROJECT SECTION ================= */
+
+.project-card{
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+    transition:0.3s ease;
+}
+
+.project-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(187,134,252,0.25);
+}
+
+.project-card h3{
+    color:#BB86FC;
+    margin-bottom:10px;
+}
+
+.project-card p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+
+/* Project Buttons */
+
+.project-links{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+
+/* ================= CONTACT SECTION ================= */
+
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+#contact a{
+    color:#BB86FC;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+#contact a:hover{
+    color:#D7B6FF;
+    text-decoration:underline;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    text-align:center;
+    padding:30px;
+
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(15px);
+
+    margin-top:50px;
+}
+
+footer p{
+    line-height:1.8;
+}
+
+::selection{
+    background: #BB86FC;
+    color: white;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .resume-buttons{
+        flex-direction:column;
+    }
+
+    .project-links{
+        flex-direction:column;
+    }
+
+    .hero-content{
+    flex-direction:column;
+}
+
+.hero-image img{
+    width:220px;
+    height:220px;
+}
+
+}
